@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Pancard-ocr</title>
+  <link rel="stylesheet" href="pcard.css">
+ </head>
+ <body>
+ 
+
+
+<h1>Upload Croped Pancard Image</h1>
+<!-- image upload start-->
+  
+<table width = "400">
+    <tr>
+    <td>
+<form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+     {{ form.as_p }}
+
+</td>
+<td><button type="submit">Upload</button> </td>
+</form>
+</tr>
+</table>
+ 
+  <h1>Result:</h1>
+  
+    {% if img_src %}
+        <img src="{{ img_src }}" width="600" height="400">
+    {% endif %}
+    <br>
+    {% if extracted_text %}
+        <p> The extracted text from the image above is:
+            <div class="container"><h2>
+                <b class="extext"> {{ extracted_text }} </b></h2></p></div> <h2>
+        
+    {% else %}
+        The extracted text will be displayed here.
+    {% endif %}
+<!-- image upload end -->
+ 
+</body>
+</html>

@@ -1,0 +1,17 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  border: 2px solid blue;
+  background-color: cyan;
+}
+
+.extext {
+  background-color: white;
+  height: 40px;
+  width: 500px;
+}
+.container {
+  background-color: rgb(52, 20, 167);
+  height: 40px;
+  width: 500px;
+}

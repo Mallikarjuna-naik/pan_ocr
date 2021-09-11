@@ -1,0 +1,13 @@
+* {
+  margin: 100%;
+  padding: 100%;
+}
+.container {
+  height: inherit;
+  width: 50%;
+  position: relative;
+  border-radius: 5%;
+}
+.img {
+  background-color: teal;
+}
